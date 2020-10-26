@@ -279,6 +279,7 @@ export function getLayoutRect(
 
     var rect = new BoundingRect(left + margin[3], top + margin[0], width, height);
     rect.margin = margin;
+    // console.log('getLayoutRect', rect);
     return rect;
 }
 

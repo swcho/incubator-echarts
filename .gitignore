@@ -177,3 +177,6 @@ todo
 **/*.log
 *.sublime-workspace
 *.sublime-project
+
+# debug
+dist

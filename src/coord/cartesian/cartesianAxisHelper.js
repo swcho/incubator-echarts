@@ -42,6 +42,7 @@ export function layout(gridModel, axisModel, opt) {
 
     var rect = grid.getRect();
     var rectBound = [rect.x, rect.x + rect.width, rect.y, rect.y + rect.height];
+    // console.log('layout', rectBound)
     var idx = {left: 0, right: 1, top: 0, bottom: 1, onZero: 2};
     var axisOffset = axisModel.get('offset') || 0;
 

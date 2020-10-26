@@ -1458,6 +1458,7 @@ function prepareView(ecIns, type, ecModel, scheduler) {
                 ? ComponentView.getClass(classType.main, classType.sub)
                 : ChartView.getClass(classType.sub);
 
+            console.log('prepare', model.type, classType)
             if (__DEV__) {
                 assert(Clazz, classType.sub + ' does not exist.');
             }
@@ -1544,8 +1545,11 @@ function render(ecIns, ecModel, api, payload) {
 }
 
 function renderComponents(ecIns, ecModel, api, payload, dirtyList) {
+    // console.log('renderComponents')
     each(dirtyList || ecIns._componentsViews, function (componentView) {
         var componentModel = componentView.__model;
+
+        // console.log(`  ${componentModel.name} ${componentModel.id}`)
         componentView.render(componentModel, ecModel, api, payload);
 
         updateZ(componentModel, componentView);

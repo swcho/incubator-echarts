@@ -144,6 +144,7 @@ var builders = {
         }
 
         var extent = this.axisModel.axis.getExtent();
+        // console.log('axisLine', extent)
 
         var matrix = this._transform;
         var pt1 = [extent[0], 0];
@@ -339,6 +340,7 @@ var builders = {
         };
         formatterParams[mainType + 'Index'] = axisModel.componentIndex;
 
+        // console.log('axisName', pos)
         var textEl = new graphic.Text({
             // Id for animation
             anid: 'name',

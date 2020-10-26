@@ -143,6 +143,8 @@ export function enableClassManagement(entity, options) {
     var storage = {};
 
     entity.registerClass = function (Clazz, componentType) {
+        // console.log('registerClass', componentType)
+
         if (componentType) {
             checkClassType(componentType);
             componentType = parseClassType(componentType);
